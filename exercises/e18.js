@@ -7,6 +7,18 @@ import { data } from "../data/data";
 export function getGreatestDiscoveryYear(data) {
   // Your code goes here...
   // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let frequency = [];
+  let maxFreq = 0;
+  let outPut; 
+  for (let item of data.asteroids) {
+    let someValue = item.discoveryYear;
+    frequency[someValue] = (frequency[someValue] || 0) + 1;
+    if (frequency[someValue] > maxFreq) {
+      maxFreq = frequency[someValue];
+      outPut = someValue;
+    }
+  } 
+    return outPut;
 }
 
 // === TEST YOURSELF ===

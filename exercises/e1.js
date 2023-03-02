@@ -6,6 +6,8 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
+  const namePlanet = data.planets.map(({ name }) => ( name ));
+   return namePlanet
 }
 
 
